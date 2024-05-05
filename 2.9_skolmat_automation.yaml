@@ -289,7 +289,7 @@ action:
                     'calendar')[nextvecka][monday].courses[0] }}
                   font: /media/fonts/GothamRnd-Bold.ttf
                   x: 5
-                  "y": 20
+                  "y": 30
                   size: 11
                   color: black
                   anchor: lm
@@ -304,7 +304,7 @@ action:
                     'calendar')[nextvecka][monday].courses[1] }}
                   font: /media/fonts/GothamRnd-Bold.ttf
                   x: 5
-                  "y": 43
+                  "y": 73
                   size: 11
                   color: black
                   anchor: lm
