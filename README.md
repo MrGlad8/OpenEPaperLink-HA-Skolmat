@@ -4,10 +4,12 @@ This automation will keep one of your 2.9'' OpenEPaperLink-displays updated with
 This automation will send the todays and tomorrows food-menu of your selected school to the display, updating 03:00 each day monday to thursday.
 At friday it will show todays menu and the menu of monday next week. And on saturday/sunday it will change to only show mondays food-menu.
 
+You first need Home Assistant and a working [OpenEpaper](https://openepaperlink.de/) setup. 
+And this code is designed for a 2.9'' size display.
+
 # Integrations needed:
-* Home Assistant and a working [OpenEpaper](https://openepaperlink.de/) setup.
-* HA Integration - https://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
-* The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via HACS)
+* https://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
+* https://github.com/Kaptensanders/skolmat - The skolmat-integration (Install via HACS)
 
 # Initial setup:
 1. Download the font `GothamRnd-Bold.ttf` and place it in your HA-folder: `/media/fonts/`
