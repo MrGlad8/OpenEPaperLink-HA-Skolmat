@@ -14,9 +14,11 @@ The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via H
 
 
 
+
 Initial setup
 
 Download the font "GothamRnd-Bold.ttf" and place it in your: /media/fonts/
+
 (If you want the font elsewhere, be sure to point it to the correct place in the automation-code or you will get an error when the automation is triggered.)
     
 Create a new automation from the 2.9_skolmat_automation.yaml
