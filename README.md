@@ -6,8 +6,8 @@ At friday it will show todays meny and the menu of monday next week. And on satu
 
 Integrations needed:
 
-    The OpenEPaperLink-integration: Ehttps://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
-    The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via HACS)
+The OpenEPaperLink-integration: Ehttps://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
+The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via HACS)
 
 Initial setup
 
