@@ -5,13 +5,14 @@ This automation will send the todays and tomorrows food-menu of your selected sc
 At friday it will show todays menu and the menu of monday next week. And on saturday/sunday it will change to only show mondays food-menu.
 
 # Integrations needed:
-* The OpenEPaperLink-integration: https://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
+* Home Assistant and a working [OpenEpaper](https://openepaperlink.de/) setup.
+* HA Integration - https://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
 * The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via HACS)
 
 # Initial setup:
-1. Download the font "GothamRnd-Bold.ttf" and place it in your HA-folder: /media/fonts/
+1. Download the font `GothamRnd-Bold.ttf` and place it in your HA-folder: `/media/fonts/`
 * (If you want the font elsewhere, be sure to point it to the correct place in the automation-code or you will get an error when the automation is triggered.)  
-2. Create a new automation from the 2.9_skolmat_automation.yaml   
+2. Create a new automation from the `2.9_skolmat_automation.yaml`   
 3. Update the automation with the name of your sensors:
-* skolmat.YOUR_SCHOOL
-* open_epaper_link.YOUR_DISPLAY_NAME
+* `skolmat.YOUR_SCHOOL`
+* `open_epaper_link.YOUR_DISPLAY_NAME`
