@@ -1,5 +1,5 @@
 alias: OpenEPaperLink - Skolmat
-description: Passar en 2.9 tums display
+description: For a 2.9 display
 trigger:
   - platform: time
     at: "03:00:00"
