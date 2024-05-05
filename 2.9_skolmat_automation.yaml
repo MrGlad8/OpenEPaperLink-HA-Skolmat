@@ -271,6 +271,20 @@ action:
               background: white
               rotate: 0
               payload:
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 4
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 279
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
                 - type: text
                   value: • Skolmat På Måndag! •
                   font: /media/fonts/GothamRnd-Bold.ttf
