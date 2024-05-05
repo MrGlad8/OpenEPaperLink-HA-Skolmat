@@ -9,7 +9,7 @@ At friday it will show todays menu and the menu of monday next week. And on satu
 * The skolmat-integration: https://github.com/Kaptensanders/skolmat (Install via HACS)
 
 # Initial setup:
-1. Download the font "GothamRnd-Bold.ttf" and place it in your: /media/fonts/
+1. Download the font "GothamRnd-Bold.ttf" and place it in your HA-folder: /media/fonts/
 * (If you want the font elsewhere, be sure to point it to the correct place in the automation-code or you will get an error when the automation is triggered.)  
 2. Create a new automation from the 2.9_skolmat_automation.yaml   
 3. Update the automation with the name of your sensors:
