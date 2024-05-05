@@ -11,7 +11,7 @@ And this code is designed for a 2.9'' size display.
 * https://github.com/jonasniesner/open_epaper_link_homeassistant (Install via HACS)
 * https://github.com/Kaptensanders/skolmat - The skolmat-integration (Install via HACS)
 
-# Initial setup:
+# Installation:
 1. Download the font `GothamRnd-Bold.ttf` and place it in your HA-folder: `/media/fonts/`
 * (If you want the font elsewhere, be sure to point it to the correct place in the automation-code or you will get an error when the automation is triggered.)  
 2. Create a new automation from the `2.9_skolmat_automation.yaml`   
