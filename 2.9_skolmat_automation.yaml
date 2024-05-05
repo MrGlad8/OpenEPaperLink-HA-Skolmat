@@ -1,0 +1,316 @@
+alias: OpenEPaperLink - Skolmat
+description: Passar en 2.9 tums display
+trigger:
+  - platform: time
+    at: "03:00:00"
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ now().weekday() in [0, 1, 2, 3] }}"
+        sequence:
+          - service: open_epaper_link.drawcustom
+            data:
+              background: white
+              rotate: 0
+              payload:
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 4
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 279
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 4
+                  "y": 73
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 279
+                  "y": 73
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: text
+                  value: >-
+                    • Skolmat Idag {{
+                    ['Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag'][now().weekday()]
+                    }} • {{ now().strftime('%m-%d') }} •
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 148
+                  "y": 8
+                  size: 11
+                  color: black
+                  anchor: mm
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set idag =
+                    now().weekday() |int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][idag].courses[0] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 16
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 275
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set idag =
+                    now().weekday() |int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][idag].courses[1] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 40
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+                - type: line
+                  x_start: 10
+                  x_end: 290
+                  y_start: 65
+                  y_end: 65
+                  width: 1
+                  fill: black
+                - type: text
+                  value: >-
+                    • Skolmat imorgon {{
+                    ['Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag'][now().weekday()+1]
+                    }} • {{(as_timestamp(now())+ (86400)) |
+                    timestamp_custom("%m-%d",true)}} •
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 148
+                  "y": 74
+                  size: 11
+                  color: black
+                  anchor: mm
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set imorgon =
+                    now().weekday()+1|int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][imorgon].courses[0] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 81
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set imorgon =
+                    now().weekday()+1|int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][imorgon].courses[1] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 105
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+            target:
+              entity_id:
+                - open_epaper_link.YOUR_DISPLAY_NAME
+      - conditions:
+          - condition: template
+            value_template: "{{ now().weekday() in [4] }}"
+        sequence:
+          - service: open_epaper_link.drawcustom
+            data:
+              background: white
+              rotate: 0
+              payload:
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 4
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 279
+                  "y": 7
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 4
+                  "y": 73
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: icon
+                  value: silverware-fork-knife
+                  x: 279
+                  "y": 73
+                  size: 12
+                  color: black
+                  anchor: lm
+                - type: text
+                  value: >-
+                    • Skolmat Idag {{
+                    ['Måndag','Tisdag','Onsdag','Torsdag','Fredag','Lördag','Söndag'][now().weekday()]
+                    }} • {{ now().strftime('%m-%d') }} •
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 148
+                  "y": 8
+                  size: 11
+                  color: black
+                  anchor: mm
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set idag =
+                    now().weekday() |int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][idag].courses[0] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 16
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 275
+                - type: text
+                  value: >-
+                    {% set vecka = now().strftime("%W")|int %} {% set idag =
+                    now().weekday() |int %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[vecka][idag].courses[1] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 40
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+                - type: line
+                  x_start: 10
+                  x_end: 290
+                  y_start: 65
+                  y_end: 65
+                  width: 1
+                  fill: black
+                - type: text
+                  value: • Skolmat Måndag nästa vecka •
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 148
+                  "y": 74
+                  size: 11
+                  color: black
+                  anchor: mm
+                - type: text
+                  value: >-
+                    {% set nextvecka = now().strftime("%W")|int+1 %} {% set
+                    monday = 0 %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[nextvecka][monday].courses[0] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 81
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+                - type: text
+                  value: >-
+                    {% set nextvecka = now().strftime("%W")|int+1 %} {% set
+                    monday = 0 %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[nextvecka][monday].courses[1] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 105
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 270
+            target:
+              entity_id:
+                - open_epaper_link.YOUR_DISPLAY_NAME
+      - conditions:
+          - condition: template
+            value_template: "{{ now().weekday() in [5, 6] }}"
+        sequence:
+          - service: open_epaper_link.drawcustom
+            data:
+              background: white
+              rotate: 0
+              payload:
+                - type: text
+                  value: • Skolmat På Måndag! •
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 147
+                  "y": 8
+                  size: 11
+                  color: black
+                  anchor: mm
+                  spacing: 2
+                - type: text
+                  value: >-
+                    {% set nextvecka = now().strftime("%W")|int+1 %} {% set
+                    monday = 0 %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[nextvecka][monday].courses[0] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 20
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 280
+                - type: text
+                  value: >-
+                    {% set nextvecka = now().strftime("%W")|int+1 %} {% set
+                    monday = 0 %}
+
+                    {{ state_attr('skolmat.YOUR_SCHOOL',
+                    'calendar')[nextvecka][monday].courses[1] }}
+                  font: /media/fonts/GothamRnd-Bold.ttf
+                  x: 5
+                  "y": 43
+                  size: 11
+                  color: black
+                  anchor: lm
+                  spacing: 2
+                  max_width: 280
+            target:
+              entity_id:
+                - open_epaper_link.YOUR_DISPLAY_NAME
+mode: restart
