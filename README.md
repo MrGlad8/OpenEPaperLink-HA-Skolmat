@@ -1,5 +1,5 @@
 # OpenEPaperLink-HA-Skolmat
-This automation will keep one of your 2.9'' displays updated with the food-menu of your selected school.
+This automation will keep one of your 2.9'' OpenEPaperLink-displays updated with the food-menu of your selected school with help from the sensor from the skolmat-integration.
 
 This automation will send the todays and tomorrows food-menu of your selected school to the display, updating 03:00 each day monday to thursday.
 At friday it will show todays menu and the menu of monday next week. And on saturday/sunday it will change to only show mondays food-menu.
