@@ -21,5 +21,5 @@ And this code is designed for a 2.9'' size display.
 * `skolmat.YOUR_SCHOOL`
 * `open_epaper_link.YOUR_DISPLAY_NAME`
 
-For more OpenEPaperLink-projects visit:
-https://github.com/jonasniesner/open_epaper_link_homeassistant/wiki
+# For more OpenEPaperLink-projects visit:
+* https://github.com/jonasniesner/open_epaper_link_homeassistant/wiki
