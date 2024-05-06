@@ -1,6 +1,4 @@
 # OpenEPaperLink-HA-Skolmat
-
-https://github.com/MrGlad8/OpenEPaperLink-HA-Skolmat/blob/main/Skolmat%20Display%20Example.jpg
 <img src="https://github.com/MrGlad8/OpenEPaperLink-HA-Skolmat/blob/main/Skolmat%20Display%20Example.jpg" width="400">
 
 This automation will keep one of your 2.9'' OpenEPaperLink-displays updated with the food-menu of your selected school with help from the sensor from the skolmat-integration.
